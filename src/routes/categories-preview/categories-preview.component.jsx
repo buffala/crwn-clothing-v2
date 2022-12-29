@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, Fragment } from "react";
 
 import { CategoriesContext } from "../../contexts/categories.context";
 import CatetoryPreview from "../../components/category-preview/category-preview.component";
@@ -8,14 +8,14 @@ import "./categories-preview.styles.scss";
 const CategoriesPreview = () => {
   const { categoriesMap } = useContext(CategoriesContext);
   return (
-    <div className="category-preveiw-container">
+    <Fragment className="category-preveiw-container">
       {Object.keys(categoriesMap).map((title) => {
         const products = categoriesMap[title];
         return (
           <CatetoryPreview key={title} title={title} products={products} />
         );
       })}
-    </div>
+    </Fragment>
   );
 };
 
