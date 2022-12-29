@@ -8,7 +8,7 @@ import "./categories-preview.styles.scss";
 const CategoriesPreview = () => {
   const { categoriesMap } = useContext(CategoriesContext);
   return (
-    <Fragment className="category-preveiw-container">
+    <Fragment>
       {Object.keys(categoriesMap).map((title) => {
         const products = categoriesMap[title];
         return (
